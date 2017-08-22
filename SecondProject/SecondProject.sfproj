@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{b922a19a-fc90-4dfd-95c5-f6b2de03dfb9}</ProjectGuid>
+    <Login>snemani1@miraclesoft.com.cm</Login>
+    <Password>eDZLLn6GtJ6n8uvVvjUCJxvpEnltMCDVIPelWrGK7VZkVUZiNY73Aw0A80SIFlHg5BChIhV5omc=</Password>
+    <SecurityToken>XIS45ayHdtzQR/0V1rYEcC31YHPZYmrMnli+QO4TJm9mnMcIQU7HpABvEcp3fXFpCccpP2msfKwTq4tmzFRk4w==</SecurityToken>
+    <Domain>login</Domain>
+    <Environment>0</Environment>
+    <ApexVersion>39.0</ApexVersion>
+    <Name>SecondProject</Name>
+    <AssemblyName>SecondProject</AssemblyName>
+    <RootNamespace>SecondProject</RootNamespace>
+    <ProjectVersion>5</ProjectVersion>
+    <PackageVersion>1.9.6.4</PackageVersion>
+    <SyncOption>False</SyncOption>
+    <AntSupport>True</AntSupport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <ItemGroup>
+    <Folder Include="AnonymousApex" />
+    <Folder Include="Soql" />
+    <Folder Include="triggers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="triggers\OppSubmitForApproval.trigger">
+      <PhysicalRelativePath>src\triggers\OppSubmitForApproval.trigger</PhysicalRelativePath>
+      <SubType>Trigger</SubType>
+      <Id>01q46000000e9VHAAY</Id>
+      <LastModifiedDateUtcTicks>131456512410000000</LastModifiedDateUtcTicks>
+      <Hash>ExwoFK63MJUsUnwO3tsBaw==</Hash>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="triggers\OppSubmitForApproval.trigger-meta.xml">
+      <PhysicalRelativePath>src\triggers\OppSubmitForApproval.trigger-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <LastModifiedDateUtcTicks>131456512410000000</LastModifiedDateUtcTicks>
+      <Hash>9XuoDQj15wlFOXk4nB99KQ==</Hash>
+      <DependentUpon>triggers\OppSubmitForApproval.trigger</DependentUpon>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Build.targets" />
+</Project>
