@@ -2,7 +2,7 @@ trigger OppSubmitForApproval on Opportunity (after update) {
 
     for (Opportunity  opp : Trigger.new) {
 
-                     
+             //ssssssss        
             Approval.ProcessSubmitRequest req = new Approval.ProcessSubmitRequest();
             
             req.setComments('Submitted for approval. Please approve.');
@@ -15,9 +15,10 @@ trigger OppSubmitForApproval on Opportunity (after update) {
              if(Approval.isLocked(opp.Id)){
         
              Approval.unlock(opp.Id);
-            //sampletest example
+            //sampletest example for git
           }                 
            
         }
 
     }
+	
